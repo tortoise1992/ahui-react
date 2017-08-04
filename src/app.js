@@ -5,19 +5,15 @@ import Redux from 'redux'
 import A from './modules/a'
 import B from './modules/b'
 import C from './modules/c'
+import './index.css'
 class App extends React.Component {
-   render(){ 
-        const style={
-            big:{
-              'font-size':'30px'
-            }
-        }
+   render(){         
      return(
        
        <div>
          hello ahui
         <p>
-          <Link to='/about' style={style.big}>1页面</Link>
+          <Link to='/about' className="big">1页面</Link>
           <br/>
           <Link to='/ahui'>2页面</Link>
         </p>
