@@ -1,6 +1,6 @@
 # ahui-react
 
-> A Vue.js project
+> A react.js project
 
 ## Build Setup
 
