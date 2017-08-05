@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
+import Todo from './todo'
+
 class B extends Component{
     render(){
+        const {dispatch,complete}=this.props
+        console.log('旧状态'+complete)
         return(
-            <div>我是b页面</div>
+            <Todo handleClick={()=>dispatch({type:'ok'})} complete={complete}></Todo>
         )
     }
 }
 
+function mapStateToProps(state){
+    return {complete:state.complete}
+}
 
-export default B
+export default connect(mapStateToProps)(B)
